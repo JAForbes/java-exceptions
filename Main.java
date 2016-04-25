@@ -1,5 +1,12 @@
 import java.util.LinkedList;
 
+// Output:
+// ----
+// Your input 1 is valid
+// Your input 10 is valid
+// Caught Exception JamesException: Negative input is not permitted
+// Caught Exception java.lang.NumberFormatException: For input string: "a"
+
 public class Main {
    public static void main(String[] args){
 
