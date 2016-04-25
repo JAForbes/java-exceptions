@@ -1,15 +1,18 @@
+import java.util.LinkedList;
+
 public class Main {
    public static void main(String[] args){
-       try {
-        throw new JamesException("What an amazing Exception");
-       } catch (NumberFormatException e){
-           System.err.println("James Exception");
-       }
+       LinkedList<NumberFormatException> errors = new LinkedList<>();
 
-       try {
-           Integer.parseInt("hello");
-       } catch (NumberFormatException e){
-           System.err.println("Caught Number format Exception");
+       errors.add(new JamesException("JamesException"));
+       errors.add(new NumberFormatException("NumberFormatException"));
+
+       for(NumberFormatException err : errors){
+           try {
+               throw err;
+           } catch (NumberFormatException e){
+               System.err.println("Caught Exception "+e.toString());
+           }
        }
    }
 }
