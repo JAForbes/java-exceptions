@@ -11,6 +11,7 @@ public class Main {
        inputs.add("10");
        inputs.add("");
        inputs.add("-1");
+       inputs.add("a");
 
        for(String input : inputs){
            try {
